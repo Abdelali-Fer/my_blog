@@ -2,7 +2,7 @@ import React from 'react'
 
 function AboutSection() {
   return (
-    <div className="relative w-full max-w-6xl mx-auto py-10 px-6">
+    <div className="relative w-full max-w-6xl mx-auto py-10 px-6 bg-[#F4F0F8  ] ">
       {/* Barre colorée */}
       <div className="absolute top-0 left-0 w-full h-2 flex justify-end">
         <div className="bg-yellow-400 w-1/2"></div>
