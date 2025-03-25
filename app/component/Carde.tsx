@@ -5,15 +5,10 @@ import {
     CardHeader,
     CardTitle,
   } from "@/components/ui/card"
-import { TbChartBar } from "react-icons/tb";
-import { TbBuildingSkyscraper } from "react-icons/tb";
-import { BsGraphUpArrow } from "react-icons/bs";
-import { MdOutlineRocketLaunch } from "react-icons/md";
-import { SiKingstontechnology } from "react-icons/si";
 import { IconType } from "react-icons";
 
 interface CardeProps {
-  icon: React.ReactNode; // ✅ Correction ici
+  icon: React.ReactNode; 
   title: string;
   description: string;
 }

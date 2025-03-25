@@ -14,7 +14,7 @@ function ProfileAuthr() {
             </Avatar>
             <h2 className="mt-4 text-lg font-semibold text-gray-900">Ferroui Abdelali</h2>
             <p className="text-sm text-gray-500">Content Writer @Company</p>
-            <div className="flex justify-center gap-4 mt-4 text-gray-700">
+            <div className="grid grid-cols-4 mt-4 text-gray-700">
                 <FaMeta className='cursor-pointer'/>
                 <FaInstagram className='cursor-pointer'/>
                 <CiTwitter className='cursor-pointer'/>
