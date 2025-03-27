@@ -5,7 +5,6 @@ import {
     CardHeader,
     CardTitle,
   } from "@/components/ui/card"
-import { IconType } from "react-icons";
 
 interface CardeProps {
   icon: React.ReactNode; 
