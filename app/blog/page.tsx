@@ -1,9 +1,9 @@
 import React from 'react'
-import NavBar from '../component/NavBar'
-import BlogHeader from '../component/BlogHeader'
-import AllPosts from '../component/AllPosts'
-import ChoseCategory from '../component/ChoseCategory'
-import Footer from '../component/Footer'
+import NavBar from '../../components/NavBar'
+import BlogHeader from '../../components/BlogHeader'
+import AllPosts from '../../components/AllPosts'
+import ChoseCategory from '../../components/ChoseCategory'
+import Footer from '../../components/Footer'
 
 function Blog() {
   return (

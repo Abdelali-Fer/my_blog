@@ -1,13 +1,13 @@
 import Image from "next/image";
-import NavBar from "./component/NavBar";
-import HomeHero from "./component/HomeHero";
-import FeaturPost from "./component/FeaturPost";
-import AboutSection from "./component/AboutSection";
-import ChoseCategory from "./component/ChoseCategory";
-import SpecialPost from "./component/SpecialPost";
-import AuthorList from "./component/AuthorList";
-import TestMonial from "./component/TestMonial";
-import Footer from "./component/Footer";
+import NavBar from "../components/NavBar";
+import HomeHero from "../components/HomeHero";
+import FeaturPost from "../components/FeaturPost";
+import AboutSection from "../components/AboutSection";
+import ChoseCategory from "../components/ChoseCategory";
+import SpecialPost from "../components/SpecialPost";
+import AuthorList from "../components/AuthorList";
+import TestMonial from "../components/TestMonial";
+import Footer from "../components/Footer";
 
 export default function Home() {
   return (
