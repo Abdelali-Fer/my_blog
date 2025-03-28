@@ -1,6 +1,6 @@
 
-import MarkdownRenderer from "@/app/component/MarkdownRenderer";
-import NavBar from "@/app/component/NavBar";
+import MarkdownRenderer from "@/components/MarkdownRenderer";
+import NavBar from "@/components/NavBar";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { getHtml } from "@/lib/data";
 import { MdOutlineRocketLaunch } from "react-icons/md";
