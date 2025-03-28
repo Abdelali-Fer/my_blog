@@ -1,38 +1,47 @@
+'use client';
 import Link from 'next/link'
 import React from 'react'
+import { usePathname } from 'next/navigation'
 
 function NavBar() {
 
+    const pathname = usePathname()
+
     return (
-        <div className='w-full h-[80px] bg-[#232536]'>
-            <div className='flex justify-between items-center h-full w-full px-4'>
+        <nav className='w-full h-[80px] bg-[#232536]'>
+            <div className='flex justify-between items-center h-full w-full px-16'>
             <div>
                 <Link href={'/'}>
                     <h2 className='text-[#fff] font-semibold tracking-widest text-2xl leading-none'>Finsweet</h2>
                 </Link>
             </div>
-            <div className='flex items-center mr-9'>
+            <div className='flex items-center'>
                 <ul className='hidden sm:flex'>
-                    <Link href={'/'}>
-                        <li className='ml-10  text-[#fff]'>Home</li>
-                    </Link>
-                    <Link href={'/blog'}>
-                        <li className='ml-10  text-[#fff]'>Blog</li>
-                    </Link>
-                    <Link href={'/about'}>
-                        <li className='ml-10  text-[#fff]'>About Us</li>
-                    </Link>
-                    <Link href={'/contact'}>
-                        <li className='mx-10  text-[#fff]'>Contact Us</li>
-                    </Link>
+                    {
+                        [
+                            { name: "Home", path: "/" },
+                            { name: "Blog", path: "/blog" },
+                            { name: "About Us", path: "/about" },
+                            { name: "Contact Us", path: "/contact" },
+                        ].map((link)=>(
+                            <li key={link.path}>
+                                <Link
+                                    href={link.path}
+                                    className={`ml-10 ${pathname === link.path ? "text-gray-400" : "text-white"}`}
+                                    >
+                                    {link.name}
+                                </Link>
+                            </li>
+                        ))
+                    }
                 </ul>
-                <Link href={'/'}>
-                    <button className='pl-4 pr-4 pt-2 pb-2  text-black bg-white mr-3'>Subscribe</button>
+                <Link href={'/'} className='ml-3'>
+                    <button className='pl-4 pr-4 pt-2 pb-2  text-black bg-white'>Subscribe</button>
                 </Link>
             </div>
             </div>
             
-        </div>
+        </nav>
     )
 }
 
