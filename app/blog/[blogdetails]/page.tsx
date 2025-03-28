@@ -1,13 +1,16 @@
-"use client";
+
+import MarkdownRenderer from "@/app/component/MarkdownRenderer";
 import NavBar from "@/app/component/NavBar";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { getHtml } from "@/lib/data";
 import { MdOutlineRocketLaunch } from "react-icons/md";
 
 
 
 
-function Blogdetails({params}:{params:{blogdetails:number}}) {
+async function Blogdetails({params}:{params:{blogdetails:number}}) {
 
+  const html = await getHtml();
 
 
 
@@ -45,7 +48,8 @@ function Blogdetails({params}:{params:{blogdetails:number}}) {
           </div>
         </div>
       </div>
-      
+      {/** markdown ici */}
+      <MarkdownRenderer content={html}/>
     </div>
   )
 }
