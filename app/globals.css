@@ -5,3 +5,56 @@
 @theme {
     --font-poppins: Poppins, sans-serif;
 }
+pre {
+  position: relative;
+  background: #1e1e1e;
+  padding: 1rem;
+  border-radius: 8px;
+  overflow-x: auto;
+  max-width: 700px; /* Limite la largeur du bloc */
+  margin: 1rem auto; /* Centre le bloc */
+  white-space: pre-wrap; /* Évite le débordement */
+  color: white;
+}
+
+.copy-button {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: #333;
+  color: white;
+  border: none;
+  padding: 4px 8px;
+  font-size: 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.copy-button:hover {
+  background: #444;
+}
+img {
+  max-width: 100%; /* ✅ Pour éviter que l'image ne dépasse la largeur du conteneur */
+  height: auto;
+  display: block;
+  margin: 1rem auto;
+  border-radius: 8px;
+}
+.markdown-content a {
+  font-weight: bold;
+  color: #007bff; /* Bleu */
+  text-decoration: none;
+}
+
+.markdown-content a:hover {
+  text-decoration: underline;
+}
+
+.markdown-content video, 
+.markdown-content iframe {
+  max-width: 700px;
+  width: 100%;
+  display: block;
+  margin: 20px auto;
+  border-radius: 8px;
+}

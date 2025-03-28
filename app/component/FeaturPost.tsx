@@ -1,10 +1,8 @@
-import React from 'react'
 import Image from 'next/image'
-import Link from 'next/link'
 
 function FeaturPost() {
   return (
-    <div className='w-full h-auto  p-[50px] pt-[80px] mb-16'>
+    <div className='w-full h-auto  px-[130px] pt-[80px] mb-16'>
         <div className='flex items-center justify-between'>
             <h2 className='font-bold text-3xl'>Featured Post</h2>
             <h2 className='font-bold text-3xl'>Some Posts</h2>
