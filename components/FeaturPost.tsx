@@ -28,7 +28,7 @@ function FeaturPost() {
                     <p className="mt-4">
                         Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
                     </p>
-                    <button className="mt-6 px-6 py-3 bg-yellow-500 text-black font-bold rounded-md">
+                    <button className="mt-6 px-6 py-3 bg-[#FFD050] text-black font-bold rounded-md">
                         Read More →
                     </button>
                 </div>
@@ -36,7 +36,7 @@ function FeaturPost() {
             <div className='basis-64 w-full ml-[30px] mr-[30px]'>
                 <div className="hover:bg-[#FBF6EA] cursor-pointer py-7">
                     <p className="mt-4 ">
-                        By <span className="text-purple-900">James West</span> | May 23, 2022
+                        By <span className="text-[#592EA9]">James West</span> | May 23, 2022
                     </p>
                     <h1 className="text-2xl font-bold mt-2 tracking-wide">
                         Step-by-step guide to choosing great font pairs
@@ -45,7 +45,7 @@ function FeaturPost() {
                 </div>
                 <div className="hover:bg-[#FBF6EA] cursor-pointer ">
                     <p className="mt-4 ">
-                        By <span className="text-purple-900">James West</span> | May 23, 2022
+                        By <span className="text-[#592EA9]">James West</span> | May 23, 2022
                     </p>
                     <h1 className="text-2xl font-bold mt-2 tracking-wide">
                         Step-by-step guide to choosing great font pairs
@@ -54,7 +54,7 @@ function FeaturPost() {
                 </div>
                 <div className="hover:bg-[#FBF6EA] cursor-pointer ">
                     <p className="mt-4 ">
-                        By <span className="text-purple-900">James West</span> | May 23, 2022
+                        By <span className="text-[#592EA9]">James West</span> | May 23, 2022
                     </p>
                     <h1 className="text-2xl font-bold mt-2 tracking-wide">
                         Step-by-step guide to choosing great font pairs
@@ -63,7 +63,7 @@ function FeaturPost() {
                 </div>
                 <div className="hover:bg-[#FBF6EA] cursor-pointer ">
                     <p className="mt-4 ">
-                        By <span className="text-purple-900">James West</span> | May 23, 2022
+                        By <span className="text-[#592EA9]">James West</span> | May 23, 2022
                     </p>
                     <h1 className="text-2xl font-bold mt-2 tracking-wide">
                         Step-by-step guide to choosing great font pairs
@@ -72,7 +72,7 @@ function FeaturPost() {
                 </div>
                 <div className="hover:bg-[#FBF6EA] cursor-pointer ">
                     <p className="mt-4 ">
-                        By <span className="text-purple-900">James West</span> | May 23, 2022
+                        By <span className="text-[#592EA9]">James West</span> | May 23, 2022
                     </p>
                     <h1 className="text-2xl font-bold mt-2 tracking-wide">
                         Step-by-step guide to choosing great font pairs

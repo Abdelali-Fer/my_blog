@@ -1,6 +1,8 @@
 
+import Footer from "@/components/Footer";
 import MarkdownRenderer from "@/components/MarkdownRenderer";
 import NavBar from "@/components/NavBar";
+import Post from "@/components/Post";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { getHtml } from "@/lib/data";
 import { MdOutlineRocketLaunch } from "react-icons/md";
@@ -12,9 +14,11 @@ async function Blogdetails({params}:{params:{blogdetails:number}}) {
 
   const html = await getHtml();
 
-
-
-
+  const Posts=[
+          {id:1,image:"/images/image1.jpeg"  ,name:'James West',date:"May 23, 2022",title:'Design tips for designers that cover everything you need',description:'Lorem reiciendis incidunt minus cupiditate aspernatur praesentium sinti, officiis molestiae perferendis quisquam accusamus alias ducimus.'},
+          {id:2,image:"/images/image1.jpeg",name:'James West',date:"May 23, 2022",title:'Design tips for designers that cover everything you need',description:'Lorem reiciendis incidunt minus cupiditate aspernatur praesentium sinti, officiis molestiae perferendis quisquam accusamus alias ducimus.'},
+          {id:3,image:"/images/image1.jpeg",name:'James West',date:"May 23, 2022",title:'Design tips for designers that cover everything you need',description:'Lorem reiciendis incidunt minus cupiditate aspernatur praesentium sinti, officiis molestiae perferendis quisquam accusamus alias ducimus.'}
+      ]
   return (
     <div>
       <NavBar />
@@ -50,6 +54,17 @@ async function Blogdetails({params}:{params:{blogdetails:number}}) {
       </div>
       {/** markdown ici */}
       <MarkdownRenderer content={html}/>
+      <div className="w-full mt-32 px-16 mb-20">
+        <div className='flex items-center justify-start'>
+          <h2 className='font-bold text-3xl'>What to read next</h2>
+        </div>
+        <div className="flex items-center justify-between" >
+          {Posts.map(
+            (item)=>(<Post id={item.id} image={item.image} name={item.name} title={item.title} date={item.date} descreption={item.description} />)
+          )}
+        </div>
+      </div>
+      <Footer />
     </div>
   )
 }
