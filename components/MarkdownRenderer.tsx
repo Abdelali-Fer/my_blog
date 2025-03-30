@@ -24,5 +24,5 @@ export default function MarkdownRenderer({ content }: { content: string }) {
         });
     }, [content]);
 
-    return <div className="prose dark:prose-invert mt-10 mx-24 markdown-content" dangerouslySetInnerHTML={{ __html: content }} />;
+    return <div className="prose dark:prose-invert mt-10 mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 markdown-content" dangerouslySetInnerHTML={{ __html: content }} />;
 }

@@ -4,9 +4,9 @@ import React from 'react'
 function AboutUsHeader() {
     return (
         <div className='relative w-full max-w-6xl mx-auto bg-[#F4F0F8] mb-10'>
-            <div className='absolute bg-white w-[400px] left-20 top-[80px] z-10 p-10'>
+            <div className='absolute bg-white w-[200px] md:w-[400px] left-20 top-[80px] z-10 p-6 sm:p-10'>
                 <h4 className="text-gray-700 text-sm font-semibold">ABOUT US</h4>
-                <h2 className="text-3xl font-semibold text-gray-900 mt-2">
+                <h2 className="text-2xl sm:text-3xl font-semibold text-gray-900 mt-2">
                     We are a community of content writers who share their learnings
                 </h2>
                         
@@ -15,9 +15,9 @@ function AboutUsHeader() {
 
             </div>
             <div className="relative bg-[url('/images/group1.jpeg')] bg-cover bg-center h-[360px]  z-0">
-                <div className='absolute w-[80%] bottom-0 left-20'>
-                    <div className='bg-[#FFD050] w-[550px] h-auto flex items-center justify-around'>
-                        <div className='py-4'>
+                <div className='absolute w-[80%] bottom-[-60px] md:bottom-0 left-0 md:left-20'>
+                    <div className='bg-[#FFD050] w-full md:w-[550px] h-auto flex sm:flex-row  items-center justify-around overflow-hidden'>
+                        <div className='py-4 text-center sm:text-left'>
                             <h2 className='text-4xl font-bold text-[#232536]'>12+</h2>
                             <p className='text-[#232536] text-sm'>Blog Published</p>
                         </div>
@@ -30,9 +30,9 @@ function AboutUsHeader() {
                             <p className='text-[#232536] text-sm'>Total active Users</p>
                         </div>
                     </div>
-                    <div className="w-full h-2 flex">
-                        <div className="bg-[#592EA9] w-1/4"></div>
-                        <div className="bg-[#FFD050] w-1/2"></div>
+                    <div className="w-[110%] md:w-full h-2 flex">
+                        <div className="bg-[#592EA9] w-[25%] md:w-1/4"></div>
+                        <div className="bg-[#FFD050] w-[75%] md:w-1/2"></div>
                     </div> 
                 </div>
             </div>

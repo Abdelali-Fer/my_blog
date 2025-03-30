@@ -11,7 +11,7 @@ print("hello world")
 
 Voici une image :
 
-![Description de l'image](/images/image1.jpeg)
+![Description de l'image](https://png.pngtree.com/thumb_back/fh260/background/20240801/pngtree-new-cb-background-images-photos-pics-wallpaper-pictures-image_16123145.jpg)
 
 # Exemple de liens  
 🔗 [Lien de google](https://google.com)  
