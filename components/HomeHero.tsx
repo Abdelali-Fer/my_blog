@@ -16,12 +16,12 @@ function HomeHero() {
                 Step-by-step guide to choosing great font pairs
             </h1>
             <p className="mt-4 text-gray-300">
-                By <span className="text-yellow-400">James West</span> | May 23, 2022
+                By <span className="text-[#FFD050]">James West</span> | May 23, 2022
             </p>
             <p className="mt-4 text-gray-300">
                 Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
             </p>
-            <button className="mt-6 px-6 py-3 bg-yellow-500 text-black font-medium">
+            <button className="mt-6 px-6 py-3 bg-[#FFD050] text-black font-medium">
                 Read More &gt;
             </button>
         </div>
