@@ -5,8 +5,8 @@ function AboutSection() {
     <div className="relative w-full max-w-6xl mx-auto py-10 px-6 bg-[#F4F0F8]">
       {/* Barre colorée */}
       <div className="absolute top-0 left-0 w-full h-2 flex justify-end">
-        <div className="bg-yellow-400 w-1/2"></div>
-        <div className="bg-purple-600 w-1/4"></div>
+        <div className="bg-[#FFD050] w-1/2"></div>
+        <div className="bg-[#592EA9] w-1/4"></div>
       </div>
 
       {/* Contenu */}
@@ -20,7 +20,7 @@ function AboutSection() {
           <p className="text-gray-600 mt-4">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </p>
-          <a href="#" className="text-purple-600 font-semibold mt-4 inline-block">
+          <a href="about" className="text-purple-600 font-semibold mt-4 inline-block">
             Read More &gt;
           </a>
         </div>
