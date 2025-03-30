@@ -12,10 +12,19 @@ function AllPosts() {
         {id:4,image:'/images/employs.jpeg',category:'startup',title:'Design tips for designers that cover everything you need',description:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure voluptatum minima illo, sunt vero, deleniti recusandae a'}
     ]
     return (
-        <div className="mx-24 py-10">
-            {Posts.map((item, index) => (
-                <OnePost  id={item.id}  image={item.image} category={item.category} title={item.title} description={item.description}/>
-            ))}
+        <div className="px-4 md:px-10 lg:px-24 py-10">
+            <div className="flex flex-col items-center">
+                {Posts.map((item) => (
+                <OnePost
+                    key={item.id}
+                    id={item.id}
+                    image={item.image}
+                    category={item.category}
+                    title={item.title}
+                    description={item.description}
+                />
+                ))}
+            </div>
             <div className="flex items-center justify-center gap-3">
             <Link href={'/'}>
                 <button className='text-lg font-medium text-gray-500 hover:text-black'>&lt; Prev</button>

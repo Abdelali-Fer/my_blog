@@ -2,7 +2,7 @@ import React from 'react'
 
 function HomeHero() {
     return (
-        <div className="relative w-full h-[620px] text-white flex items-center">
+        <div className="relative w-full h-[620px] text-white flex items-center z-0">
         {/* Image en arrière-plan */}
         <div className="absolute inset-0 bg-[url('/images/image1.jpeg')] bg-cover bg-center"></div>
 

@@ -17,9 +17,14 @@ function ChoseCategory() {
             <div className='flex items-center justify-center'>
                 <h2 className='font-bold text-3xl'>Chose category</h2>
             </div>
-            <div className='flex items-center justify-between pt-9'>
+            <div className="flex flex-col md:flex-row flex-wrap items-center justify-center md:justify-between pt-9 gap-6">
             {icons.map((item, index) => (
-                <Carde key={index} icon={item.icon} title={item.title} description={item.description} />
+                <Carde 
+                key={index} 
+                icon={item.icon} 
+                title={item.title} 
+                description={item.description} 
+                />
             ))}
             </div>
         </div>
