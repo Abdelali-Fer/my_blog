@@ -42,7 +42,7 @@ const Navbar = () => {
               </li>
             ))}
           </ul>
-          <Link href="/" className="ml-3">
+          <Link href="/author" className="ml-3">
             <button className="px-4 py-2 text-black bg-white">Subscribe</button>
           </Link>
         </div>
