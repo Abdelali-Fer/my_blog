@@ -3,6 +3,7 @@
 import prisma from "@/lib/prisma";
 import { QueryType } from "@prisma/client";
 
+
 export async function sendMessage(data: { fullName: string; email: string; queryType: string; content: string }) {
     try {
         console.log(data);
