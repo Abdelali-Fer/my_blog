@@ -1,0 +1,29 @@
+name: Deploy to Vercel
+
+on:
+  push:
+    branches:
+      - main  # Déclencher l'action uniquement sur la branche principale
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 📥 Checkout du code
+        uses: actions/checkout@v4
+
+      - name: 📦 Installer Node.js et dépendances
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+          cache: "npm"
+
+      - name: 📥 Installer les dépendances
+        run: npm install
+
+      - name: 🔄 Générer Prisma Client
+        run: npx prisma generate
+
+      - name: 🚀 Déployer sur Vercel
+        run: npx vercel --prod --token=${{ secrets.VERCEL_TOKEN }}
