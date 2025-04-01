@@ -6,7 +6,7 @@ import { QueryType } from "@prisma/client";
 const ContactForm = () => {
     const [fullName, setFullName] = useState("");
     const [email, setEmail] = useState("");
-    const [queryType, setQueryType] = useState("GENERAL");
+    const [queryType, setQueryType] = useState<keyof typeof QueryType>("GENERAL");
     const [message, setMessage] = useState("");
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [status, setStatus] = useState("");
