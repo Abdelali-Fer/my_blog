@@ -1,10 +1,19 @@
 "use server";
 
 import prisma from "@/lib/prisma";
-import { QueryType } from "@prisma/client";
+// Définition manuelle de `QueryType`
+const QueryType = {
+    GENERAL: "GENERAL",
+    SUPPORT: "SUPPORT",
+    FEEDBACK: "FEEDBACK",
+    BUSINESS: "BUSINESS",
+  } as const;
+  
+  // Création du type `QueryType`
+  type QueryType = (typeof QueryType)[keyof typeof QueryType];
 
 
-export async function sendMessage(data: { fullName: string; email: string; queryType: keyof typeof QueryType; content: string }) {
+export async function sendMessage(data: { fullName: string; email: string; queryType: QueryType; content: string }) {
     try {
         console.log(data);
 

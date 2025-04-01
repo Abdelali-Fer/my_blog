@@ -1,12 +1,21 @@
 "use client";
 import { sendMessage } from "@/app/actions/contact.action";
 import React, { useState } from "react";
-import { QueryType } from "@prisma/client";
+// Définition manuelle de `QueryType`
+const QueryType = {
+    GENERAL: "GENERAL",
+    SUPPORT: "SUPPORT",
+    FEEDBACK: "FEEDBACK",
+    BUSINESS: "BUSINESS",
+  } as const;
+  
+  // Création du type `QueryType`
+  type QueryType = (typeof QueryType)[keyof typeof QueryType];
 
 const ContactForm = () => {
     const [fullName, setFullName] = useState("");
     const [email, setEmail] = useState("");
-    const [queryType, setQueryType] = useState<keyof typeof QueryType>("GENERAL");
+    const [queryType, setQueryType] = useState<QueryType>("GENERAL");
     const [message, setMessage] = useState("");
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [status, setStatus] = useState("");
