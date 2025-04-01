@@ -7,10 +7,9 @@ const QueryType = {
     SUPPORT: "SUPPORT",
     FEEDBACK: "FEEDBACK",
     BUSINESS: "BUSINESS",
-  } as const;
-  
-  // Création du type `QueryType`
-  type QueryType = (typeof QueryType)[keyof typeof QueryType];
+} as const;
+
+type QueryType = (typeof QueryType)[keyof typeof QueryType];
 
 
 export async function sendMessage(data: { fullName: string; email: string; queryType: QueryType; content: string }) {
