@@ -157,7 +157,7 @@ const Navbar = () => {
                 {user.email.slice(0, 2).toUpperCase()}
               </button>
             ) : (
-              <Link href="/author">
+              <Link href="/login">
                 <button className="px-4 py-2 text-black bg-white">
                   Subscribe
                 </button>
