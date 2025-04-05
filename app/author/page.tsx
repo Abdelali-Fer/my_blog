@@ -1,10 +1,7 @@
-import AllPosts from '@/components/AllPosts'
 import AuthorHeader from '@/components/AuthorHeader'
 import Footer from '@/components/Footer'
 import Navbar from '@/components/NavBar'
 import OnePost from '@/components/OnePost'
-import React from 'react'
-
 function page() {
     const Posts=[
         {id:1,image:'/images/employs.jpeg'  ,category:'startup',title:'Design tips for designers that cover everything you need',description:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure voluptatum minima illo, sunt vero, deleniti recusandae a'},
@@ -27,7 +24,6 @@ function page() {
                 </div>
             </div>
             <Footer/>
-
         </div>
     )
 }

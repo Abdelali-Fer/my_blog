@@ -2,7 +2,7 @@ import React from 'react'
 
 function SpecialPost() {
     return (
-        <div className='relative w-full  px-6 md:px-[120px] py-5 my-14 h-[488px]'>
+        <div className='relative w-full  md:px-[120px] py-5 my-14 h-[488px]'>
 
             <img src="/images/paris.jpeg" alt="paris" className='-z-10 absolute top-0 bottom-0'/>
             
