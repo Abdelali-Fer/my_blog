@@ -3,13 +3,18 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { FaBars, FaTimes } from "react-icons/fa";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [userMenuOpen, setUserMenuOpen] = useState(false); // Gérer l'affichage du menu utilisateur
   const pathname = usePathname();
   const [user, setUser] = useState<{ email: string } | null>(null);
+  const router = useRouter();
+
+  const handleEmailClick = () => {
+    router.push('/author');
+  };
 
   useEffect(() => {
     const fetchSession = async () => {
@@ -29,9 +34,11 @@ const Navbar = () => {
 
   // Fonction pour se déconnecter
   const handleLogout = async () => {
-    await fetch("/api/logout", { method: "POST" }); // API pour supprimer la session
-    setUser(null); // Supprime l'utilisateur côté client
-    setUserMenuOpen(false); // Ferme le menu
+    await fetch("/api/logout", { method: "POST" });
+    setUser(null);
+    setUserMenuOpen(false); 
+    router.push('/login');
+
   };
 
   return (
@@ -83,7 +90,7 @@ const Navbar = () => {
               {userMenuOpen && (
                 <div className="absolute right-0 mt-2 w-40 bg-white rounded-lg shadow-lg z-10">
                   <ul className="text-black">
-                    <li className="px-4 py-2 border-b">{user.email}</li>
+                    <li className="px-4 py-2 border-b cursor-pointer" onClick={handleEmailClick}>{user.email}</li>
                     <li>
                       <button
                         onClick={handleLogout}
@@ -97,7 +104,7 @@ const Navbar = () => {
               )}
             </div>
           ) : (
-            <Link href="/author" className="ml-3">
+            <Link href="/login" className="ml-3">
               <button className="px-4 py-2 text-black bg-white">
                 Subscribe
               </button>

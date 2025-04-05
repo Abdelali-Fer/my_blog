@@ -1,3 +1,4 @@
+import { decrypt } from "@/lib/session";
 import { cookies } from "next/headers";
 import { NextResponse } from "next/server";
 
@@ -9,8 +10,9 @@ export async function GET() {
     }
 
     try {
-        const user = JSON.parse(session.value);
+        const user = await decrypt(session.value);
         return NextResponse.json({ user }, { status: 200 });
+        
     } catch (error) {
         return NextResponse.json({ user: null }, { status: 500 });
     }

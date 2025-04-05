@@ -1,8 +1,7 @@
 "use server"
 
 import prisma from "@/lib/prisma"
-import { revalidatePath } from "next/cache"
-import { cookies } from "next/headers"
+import { createSession } from "@/lib/session"
 
 type SignupData = {
     email: string
@@ -33,14 +32,7 @@ export async function signup(data: SignupData) {
         });
 
         if(user){
-            cookies().set({
-                name: "session",
-                value: JSON.stringify({ userId: user.id, email: data.email }),
-                httpOnly: true,
-                path: "/",
-                secure: process.env.NODE_ENV === "production",
-                maxAge: 60 * 60 * 24 * 7, // 1 week
-            })
+            await createSession(user.id)
         }
         return { success: true }
     } catch (error) {
@@ -64,16 +56,7 @@ export async function login(data: LoginData) {
         if (!user) {
             return { success: false, error: "Invalid email or password" };
         }
-        // Stocker la session
-        cookies().set({
-            name: "session",
-            value: JSON.stringify({ userId: user.id, email: user.email }),
-            httpOnly: true,
-            path: "/",
-            secure: process.env.NODE_ENV === "production",
-        maxAge: 60 * 60 * 24 * 7, // 1 semaine
-        });
-
+        await createSession(user.id);
         return { success: true };
     } catch (error) {
         console.error("Login error:", error);
@@ -81,3 +64,6 @@ export async function login(data: LoginData) {
     }
 }
 
+export async function Logout() {
+    
+}

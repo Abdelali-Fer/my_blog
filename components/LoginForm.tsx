@@ -1,27 +1,27 @@
 "use client"
 
-import { useState } from "react"
-import { useRouter } from "next/navigation"
-import { zodResolver } from "@hookform/resolvers/zod"
-import { useForm } from "react-hook-form"
-import { z } from "zod"
 
-import { Button } from "@/components/ui/button"
-import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form"
-import { Input } from "@/components/ui/input"
 import { login, signup } from "@/app/actions/auth.action"
+import { redirect, useRouter } from "next/navigation"
+import { useState } from "react"
+import { useForm } from "react-hook-form"
+import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from "./ui/form"
+import { Input } from "./ui/input"
+import { Button } from "./ui/button"
+import { z } from 'zod';
+import { zodResolver } from '@hookform/resolvers/zod';
 
 
 const formSchema = z.object({
-  email: z.string().email({
-    message: "Please enter a valid email address.",
-  }),
-  password: z.string().min(8, {
-    message: "Password must be at least 8 characters.",
-  }),
+    email: z.string().email({
+        message: "Please enter a valid email address.",
+    }),
+    password: z.string().min(8, {
+        message: "Password must be at least 8 characters.",
+    }),
 })
 
-export function SignupForm() {
+export function LoginForm() {
     const router = useRouter()
     const [isLoading, setIsLoading] = useState(false)
     const [error, setError] = useState<string | null>(null)
@@ -35,14 +35,14 @@ export function SignupForm() {
     })
 
 async function onSubmit(values: z.infer<typeof formSchema>) {
-    setIsLoading(true)
-    setError(null)
+        setIsLoading(true)
+        setError(null)
 
         try {
         const result = await login(values)
 
         if (result.success) {
-            router.push("/")
+            router.push("/author");
         } else {
             setError(result.error || "Something went wrong. Please try again.")
         }
@@ -86,16 +86,10 @@ async function onSubmit(values: z.infer<typeof formSchema>) {
             />
             {error && <div className="text-sm font-medium text-destructive">{error}</div>}
             <Button type="submit" className="w-full" disabled={isLoading}>
-                {isLoading ? "Creating account..." : "Create account"}
+                {isLoading ? "Login..." : "Login"}
             </Button>
             </form>
         </Form>
-        <div className="text-center text-sm">
-            Already have an account?{" "}
-            <a href="/" className="underline underline-offset-4 hover:text-primary">
-            Sign in
-            </a>
-        </div>
         </div>
     )
 }
